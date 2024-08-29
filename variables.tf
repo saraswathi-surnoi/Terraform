@@ -18,3 +18,19 @@ variable "key_name" {
 variable "ami" {
   default = "ami-025fe52e1f2dc5044"
 }
+variable "bucket_prefix" {
+    type        = string
+    description = "(required since we are not using 'bucket') Creates a unique bucket name beginning with the specified prefix"
+    default     = "my-s3bucket-"
+}
+variable "acl" {
+    type        = string
+    description = " Defaults to private "
+    default     = "private"
+}
+variable "versioning" {
+    type        = bool
+    description = "(Optional) A state of versioning."
+    default     = true
+}
+
