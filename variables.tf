@@ -20,7 +20,7 @@ variable "security_group" {
 
 variable "tag_name" { 
     description = "Tag Name of for Ec2 instance" 
-    default     = "my-jenkins" 
+    default     = "myFirstInstance" 
 } 
 variable "ami_id" { 
     description = "AMI for linux Ec2 instance" 
