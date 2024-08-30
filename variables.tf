@@ -61,6 +61,7 @@ variable "instance_types" {
 variable "application_type" {
   description = "Type of application to determine the instance type"
   type        = string
+  default     = "sonarqube"
 }
 
 
