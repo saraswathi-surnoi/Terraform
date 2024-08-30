@@ -49,18 +49,15 @@ variable "tags" {
         terraform   = "true"
     }
 }
-
-Memory updated
-To write Terraform code that automatically selects instance types based on specific conditions, such as using t2.medium for SonarQube and other instance types for different applications, you can use conditional expressions or lookup maps. Here's a basic example:
-
-Step 1: Define a Variable for Instance Type
-First, create a variable that will allow you to specify the application type.
-
-hcl
-Copy code
-variable "application_type" {
-  description = "Type of application to determine the instance type"
-  type        = string
+variable "instance_types" {
+  description = "Map of application types to instance types"
+  type        = map(string)
+  default = {
+    sonarqube = "t2.medium"
+    webserver = "t2.micro"
+    database  = "t2.large"
+  }
 }
+
 
 
