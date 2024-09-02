@@ -1,4 +1,4 @@
-resource "aws_instance" "mySonarInstance" {
+resource "aws_instance" "mySonarqube" {
       ami           = "ami-02b49a24cfb95941c"
       key_name = var.key_name
       instance_type = "t2.micro"
