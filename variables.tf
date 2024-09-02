@@ -58,10 +58,6 @@ variable "instance_types" {
     database  = "t2.large"
   }
 }
-variable "application_type" {
-  description = "Type of application to determine the instance type"
-  type        = string
-  default     = "sonarqube"
-}
+
 
 
