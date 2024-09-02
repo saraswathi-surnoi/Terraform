@@ -54,7 +54,8 @@ tags= {
 }
 resource "aws_instance" "example" {
   ami           = "ami-02b49a24cfb95941c"  # Replace with your AMI ID
-  instance_type = lookup("var.instance_types, var.application_type")
+ instance_type = lookup(var.instance_types, var.application_type, "t2.micro")
+
 
   tags = {
     Name = var.application_type
