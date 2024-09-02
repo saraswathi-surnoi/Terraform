@@ -53,7 +53,7 @@ tags= {
   }
 }
 resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Replace with your AMI ID
+  ami           = "ami-02b49a24cfb95941c"  # Replace with your AMI ID
   instance_type = lookup(var.instance_types, var.application_type")
 
   tags = {
