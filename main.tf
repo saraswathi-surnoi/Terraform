@@ -60,7 +60,7 @@ variable "application_type" {
 # Resource block for creating the AWS instance
 resource "aws_instance" "example" {
   ami           = "ami-02b49a24cfb95941c"  # Replace with your actual AMI ID
-  instance_type = lookup(var.instance_types, var.application_type, "t2.medium")  # Default to t2.micro if not found
+  instance_type = lookup(var.instance_types, var.application_type, "t2.micro")  # Default to t2.micro if not found
 
   tags = {
     Name = var.application_type
