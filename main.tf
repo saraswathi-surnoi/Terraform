@@ -60,4 +60,4 @@ variable "application_type" {
   tags = {
     Name = var.application_type
   }
-}
+
