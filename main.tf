@@ -57,11 +57,6 @@ variable "application_type" {
   type        = string
   default     = "sonarqube"
 }
-# Resource block for creating the AWS instance
-resource "aws_instance" "sonarqube" {
-  ami           = "ami-02b49a24cfb95941c"  # Replace with your actual AMI ID
-  instance_type = lookup(var.instance_types, var.application_type, "t2.micro")  # Default to t2.micro if not found
-
   tags = {
     Name = var.application_type
   }
