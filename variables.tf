@@ -58,6 +58,11 @@ variable "tags" {
     # database  = "t2.large"
   }
 }
+variable "sonarqube" {
+  description = "A boolean to determine if SonarQube is being deployed. Set to true if yes."
+  type        = bool
+  default     = false  # Set this to true if SonarQube should be deployed by default
+}
 
 
 
