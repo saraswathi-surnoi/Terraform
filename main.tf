@@ -57,5 +57,7 @@ tags= {
  # type        = string
  # default     = "sonarqube"
 #}
-count = var.sonarqube == true ? t2.medium : t2micro
+locals {
+  instance_type = var.sonarqube == true ? "t2.micro" : "t2.medium"
+}
  
