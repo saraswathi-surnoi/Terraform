@@ -52,9 +52,10 @@ tags= {
     Name = "my_elastic_ip"
   }
 }
-variable "application_type" {
-  description = "Type of application to determine the instance type"
-  type        = string
-  default     = "sonarqube"
-}
+#variable "application_type" {
+ # description = "Type of application to determine the instance type"
+ # type        = string
+ # default     = "sonarqube"
+#}
+count = var.sonarqube == true ? t2.medium : t2micro
  
