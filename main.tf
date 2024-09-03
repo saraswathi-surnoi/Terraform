@@ -57,7 +57,4 @@ variable "application_type" {
   type        = string
   default     = "sonarqube"
 }
-  tags = {
-    Name = var.application_type
-  }
-
+ 
