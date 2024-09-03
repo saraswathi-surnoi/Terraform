@@ -49,13 +49,13 @@ variable "tags" {
         terraform   = "true"
     }
 }
-variable "instance_types" {
-  description = "Map of application types to instance types"
-  type        = map(string)
-  default = {
-    sonarqube = "t2.medium"
-    webserver = "t2.micro"
-    database  = "t2.large"
+#variable "instance_types" {
+ # description = "Map of application types to instance types"
+  # type        = map(string)
+  # default = {
+   # sonarqube = "t2.medium"
+   # webserver = "t2.micro"
+    # database  = "t2.large"
   }
 }
 
