@@ -56,8 +56,8 @@ variable "tags" {
    # sonarqube = "t2.medium"
    # webserver = "t2.micro"
     # database  = "t2.large"
-  }
-}
+ # }
+#}
 variable "sonarqube" {
   description = "A boolean to determine if SonarQube is being deployed. Set to true if yes."
   type        = bool
